@@ -6,3 +6,16 @@ C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.Properties.Resources.reso
 C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
 C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.exe
 C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.pdb
+C:\labs\CompGraphicsLab7\Lab7\bin\Debug\Lab7.exe.config
+C:\labs\CompGraphicsLab7\Lab7\bin\Debug\Lab7.exe
+C:\labs\CompGraphicsLab7\Lab7\bin\Debug\Lab7.pdb
+C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.csprojAssemblyReference.cache
+C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.Properties.Resources.resources
+C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
+C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.csproj.CoreCompileInputs.cache
+C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.exe
+C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.pdb
+C:\labs\CompGraphicsLab7\Lab7\bin\Debug\Newtonsoft.Json.dll
+C:\labs\CompGraphicsLab7\Lab7\bin\Debug\Newtonsoft.Json.xml
+C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.Form1.resources
+C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.csproj.CopyComplete

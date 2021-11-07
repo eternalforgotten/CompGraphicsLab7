@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Math;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace Lab7
 {
@@ -83,6 +86,14 @@ namespace Lab7
             curFigure.AddEdges(5, new List<int> { 6 });
             curFigure.AddEdges(6, new List<int> { 7 });
             curFigure.AddEdges(7, new List<int> { 4 });
+
+            curFigure.AddSurface(new List<int> { 0, 1, 2, 3 });
+            curFigure.AddSurface(new List<int> { 1, 2, 6, 5 });
+            curFigure.AddSurface(new List<int> { 0, 3, 7, 4 });
+            curFigure.AddSurface(new List<int> { 4, 5, 6, 7 });
+            curFigure.AddSurface(new List<int> { 2, 3, 7, 6 });
+            curFigure.AddSurface(new List<int> { 0, 1, 5, 4 });
+
             Draw();
         }
 
@@ -103,6 +114,13 @@ namespace Lab7
             curFigure.AddEdges(0, new List<int> { 1, 3, 2 });
             curFigure.AddEdges(1, new List<int> { 3 });
             curFigure.AddEdges(2, new List<int> { 1, 3 });
+
+
+            curFigure.AddSurface(new List<int> { 0, 1, 2 });
+            curFigure.AddSurface(new List<int> { 0, 1, 3 });
+            curFigure.AddSurface(new List<int> { 0, 2, 3 });
+            curFigure.AddSurface(new List<int> { 1, 2, 3 });
+
 
             Draw();
         }
@@ -133,6 +151,17 @@ namespace Lab7
             curFigure.AddEdges(3, new List<int> { 2 });
             curFigure.AddEdges(2, new List<int> { 4 });
             curFigure.AddEdges(4, new List<int> { 1 });
+
+            curFigure.AddSurface(new List<int> { 0, 1, 3 });
+            curFigure.AddSurface(new List<int> { 0, 1, 4 });
+            curFigure.AddSurface(new List<int> { 0, 2, 3 });
+            curFigure.AddSurface(new List<int> { 0, 2, 4 });
+            curFigure.AddSurface(new List<int> { 5, 1, 3 });
+            curFigure.AddSurface(new List<int> { 5, 1, 4 });
+            curFigure.AddSurface(new List<int> { 5, 2, 3 });
+            curFigure.AddSurface(new List<int> { 5, 2, 4 });
+
+
             Draw();
         }
 
@@ -243,6 +272,28 @@ namespace Lab7
         private void rotateOwn_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fName = saveFileDialog1.FileName;
+                File.WriteAllText(fName, JsonConvert.SerializeObject(curFigure, Formatting.Indented), Encoding.UTF8);
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fName = openFileDialog1.FileName;
+                if (File.Exists(fName))
+                {
+                    curFigure = JsonConvert.DeserializeObject<Figure>(File.ReadAllText(fName, Encoding.UTF8));
+                    Draw();
+                }
+            }
         }
     }
 }

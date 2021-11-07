@@ -51,6 +51,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.rotateOX = new System.Windows.Forms.RadioButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.rotateOY = new System.Windows.Forms.RadioButton();
             this.rotateOZ = new System.Windows.Forms.RadioButton();
             this.rotateAngle = new System.Windows.Forms.NumericUpDown();
@@ -69,6 +70,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.rotateOwn = new System.Windows.Forms.RadioButton();
+            this.button12 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rotateAngle)).BeginInit();
             this.SuspendLayout();
@@ -125,6 +129,12 @@
             this.button4.Text = "Октаэдр";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "json";
+            this.openFileDialog1.FileName = "Figure";
+            this.openFileDialog1.Filter = "JSON files|*.json|All files|*.*";
             // 
             // label2
             // 
@@ -223,6 +233,12 @@
             this.label5.Size = new System.Drawing.Size(73, 17);
             this.label5.TabIndex = 22;
             this.label5.Text = "Проекция";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "json";
+            this.saveFileDialog1.FileName = "Figure";
+            this.saveFileDialog1.Filter = "JSON files|*.json|All files|*.*";
             // 
             // button5
             // 
@@ -508,11 +524,33 @@
             this.rotateOwn.CheckedChanged += new System.EventHandler(this.rotateOwn_CheckedChanged);
             this.rotateOwn.Click += new System.EventHandler(this.rotateOwn_Click);
             // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(1050, 653);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(105, 32);
+            this.button12.TabIndex = 44;
+            this.button12.Text = "Сохранить";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(1161, 653);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(108, 33);
+            this.button13.TabIndex = 45;
+            this.button13.Text = "Загрузить";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1281, 697);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.rotateOwn);
             this.Controls.Add(this.rZ2);
             this.Controls.Add(this.rY2);
@@ -606,6 +644,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton rotateOwn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
 

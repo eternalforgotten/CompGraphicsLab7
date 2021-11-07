@@ -84,6 +84,7 @@ namespace Lab7
     {
         public List<Point3D> Vertexes { get; set; } = new List<Point3D>();
         public List<Edge> Edges { get; } = new List<Edge>();
+        public List<List<int>> Surfaces { get; } = new List<List<int>>();
         public Dictionary<int, List<int>> Adjacency { get; } = new Dictionary<int, List<int>>();
 
         public Point3D Center()
@@ -118,5 +119,11 @@ namespace Lab7
             foreach (int b in l)
                 AddEdges(a, b);
         }
+
+        public void AddSurface(List<int> lst)
+        {
+            Surfaces.Add(lst);
+        }
+
     }
 }
