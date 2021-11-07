@@ -106,6 +106,8 @@ namespace Lab7
             }
         }
 
+        public Figure() { }
+
         public void AddEdges(int a, int b)
         {
             if (!Adjacency.ContainsKey(a))

@@ -19,3 +19,7 @@ C:\labs\CompGraphicsLab7\Lab7\bin\Debug\Newtonsoft.Json.dll
 C:\labs\CompGraphicsLab7\Lab7\bin\Debug\Newtonsoft.Json.xml
 C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.Form1.resources
 C:\labs\CompGraphicsLab7\Lab7\obj\Debug\Lab7.csproj.CopyComplete
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\bin\Debug\Newtonsoft.Json.dll
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\bin\Debug\Newtonsoft.Json.xml
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.Form1.resources
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.csproj.CopyComplete
