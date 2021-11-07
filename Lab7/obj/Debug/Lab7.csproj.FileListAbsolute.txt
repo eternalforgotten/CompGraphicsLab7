@@ -1,0 +1,8 @@
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\bin\Debug\Lab7.exe.config
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\bin\Debug\Lab7.exe
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\bin\Debug\Lab7.pdb
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.csprojAssemblyReference.cache
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.Properties.Resources.resources
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.csproj.GenerateResource.cache
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.exe
+C:\SFEDU\Graphics\CompGraphicsLab7\Lab7\obj\Debug\Lab7.pdb
