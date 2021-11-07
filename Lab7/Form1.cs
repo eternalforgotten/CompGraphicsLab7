@@ -19,6 +19,9 @@ namespace Lab7
         Pen pen;
         Projection projection;
         Figure curFigure;
+        private List<Point3D> pointsRotate;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +30,7 @@ namespace Lab7
             g.Clear(Color.White);
             pen = new Pen(Color.BlueViolet, 2);
             projection = new Projection();
+            pointsRotate = new List<Point3D>();
             projBox.SelectedIndex = 0;
         }
         private void Draw()
@@ -128,6 +132,7 @@ namespace Lab7
         {
             g.Clear(Color.White);
             pictureBox1.Invalidate();
+            pointsRotate.Clear();
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -295,5 +300,87 @@ namespace Lab7
                 }
             }
         }
+
+
+
+
+        
+        private void addPointButton_Click(object sender, EventArgs e)
+        {
+            float x = float.Parse(textBox6.Text);
+            float y = float.Parse(textBox7.Text);
+            float z = float.Parse(textBox8.Text);
+
+            pointsRotate.Add(new Point3D(x, y, z));
+            DrawCurve();
+        }
+
+        // рисует кривую по точкам для фигуры вращения
+        private void DrawCurve()
+        {
+            g.Clear(Color.White);
+            int startX = pictureBox1.Width / 2;
+            int startY = pictureBox1.Height / 2;
+            if (pointsRotate.Count > 1)
+            {
+                for (int i = 1; i < pointsRotate.Count; i++)
+                {
+
+                    g.DrawLine(new Pen(Color.Black), startX + pointsRotate[i - 1].MakeAPoint().X,
+                                                            startY + pointsRotate[i - 1].MakeAPoint().Y,
+                                                            startX + pointsRotate[i].MakeAPoint().X,
+                                                            startY + pointsRotate[i].MakeAPoint().Y);
+                }
+            }
+            pictureBox1.Invalidate();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+            int count = int.Parse(textBox5.Text);
+            char axis;
+            if (radioButton1.Checked)
+            {
+                axis = 'x';
+            }
+            else if (radioButton2.Checked)
+            {
+                axis = 'y';
+            }
+            else
+            {
+                axis = 'z';
+            }
+            
+        }
+
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton2.Checked = radioButton3.Checked = false;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton1.Checked = radioButton3.Checked = false;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            radioButton1.Checked = radioButton2.Checked = false;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            float x = float.Parse(textBox6.Text);
+            float y = float.Parse(textBox7.Text);
+            float z = float.Parse(textBox8.Text);
+
+            pointsRotate.Add(new Point3D(x, y, z));
+            DrawCurve();
+        }
+
+        
     }
 }

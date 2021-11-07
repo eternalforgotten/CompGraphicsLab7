@@ -41,6 +41,11 @@ namespace Lab7
             return new Point((int)X, (int)Y);
         }
         ~Point3D() { }
+
+        public Point MakeAPoint()
+        {
+            return new Point((int)X, (int)Y);
+        }
     }
     public class Edge
     {
