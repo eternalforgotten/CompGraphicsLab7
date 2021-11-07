@@ -8,7 +8,7 @@ namespace Lab7
 {
     class AffineChanges
     {
-        static private float[,] MatrixColumnFromPoint3D(Point3D p)
+        static public float[,] MatrixColumnFromPoint3D(Point3D p)
         {
             return new float[,] { { p.X }, { p.Y }, { p.Z }, { 1 } };
         }
@@ -59,26 +59,27 @@ namespace Lab7
 
             Translate(fig, -locX, -locY, -locZ);
 
-            float loccos = (float)Math.Cos(anX * Math.PI / 180);
-            float locsin = (float)Math.Sin(anX * Math.PI / 180);
+            float cos = (float)Math.Cos(TransformAngle(anX));
+            float sin = (float)Math.Sin(TransformAngle(anX));
 
             float[,] matrixX = { { 1,  0,   0,  0},
-                                 { 0, loccos,-locsin, 0},
-                                 { 0, locsin, loccos, 0},
+                                 { 0, cos,-sin, 0},
+                                 { 0, sin, cos, 0},
                                  { 0,  0,   0,  1}};
 
-            loccos = (float)Math.Cos(anY * Math.PI / 180);
-            locsin = (float)Math.Sin(anY * Math.PI / 180);
+            cos = (float)Math.Cos(TransformAngle(anY));
+            sin = (float)Math.Sin(TransformAngle(anY));
 
-            float[,] matrixY = { { loccos, 0, locsin, 0},
+            float[,] matrixY = { { cos, 0, sin, 0},
                                  {  0,  1,  0,  0},
-                                 {-locsin, 0, loccos, 0},
+                                 {-sin, 0, cos, 0},
                                  {  0,  0,  0,  1}};
 
-            locsin = (float)Math.Sin(anZ * Math.PI / 180);
-            loccos = (float)Math.Cos(anZ * Math.PI / 180);
-            float[,] matrixZ = { { loccos, -locsin, 0, 0},
-                                 { locsin,  loccos, 0, 0},
+            sin = (float)Math.Sin(TransformAngle(anZ));
+            cos = (float)Math.Cos(TransformAngle(anZ));
+
+            float[,] matrixZ = { { cos, -sin, 0, 0},
+                                 { sin,  cos, 0, 0},
                                  {  0,    0,  1, 0},
                                  {  0,    0,  0, 1}};
 

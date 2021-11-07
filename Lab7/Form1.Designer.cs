@@ -125,10 +125,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(5, 706);
+            this.button3.Location = new System.Drawing.Point(5, 654);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(208, 45);
+            this.button3.Size = new System.Drawing.Size(216, 45);
             this.button3.TabIndex = 3;
             this.button3.Text = "Очистить";
             this.button3.UseVisualStyleBackColor = true;
@@ -421,7 +421,6 @@
             this.rY1.Size = new System.Drawing.Size(61, 22);
             this.rY1.TabIndex = 35;
             this.rY1.Text = "0";
-            this.rY1.TextChanged += new System.EventHandler(this.rY1_TextChanged);
             // 
             // rX1
             // 
@@ -530,14 +529,13 @@
             this.rotateOwn.TabStop = true;
             this.rotateOwn.Text = "Произвольная ось";
             this.rotateOwn.UseVisualStyleBackColor = true;
-            this.rotateOwn.CheckedChanged += new System.EventHandler(this.rotateOwn_CheckedChanged);
             this.rotateOwn.Click += new System.EventHandler(this.rotateOwn_Click);
             // 
             // button12
             // 
             this.button12.Location = new System.Drawing.Point(6, 616);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(89, 32);
+            this.button12.Size = new System.Drawing.Size(105, 32);
             this.button12.TabIndex = 44;
             this.button12.Text = "Сохранить";
             this.button12.UseVisualStyleBackColor = true;
@@ -553,7 +551,7 @@
             // 
             this.button13.Location = new System.Drawing.Point(117, 616);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(96, 33);
+            this.button13.Size = new System.Drawing.Size(104, 33);
             this.button13.TabIndex = 45;
             this.button13.Text = "Загрузить";
             this.button13.UseVisualStyleBackColor = true;
@@ -578,7 +576,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "oX";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
             // 
             // radioButton2
             // 
@@ -590,7 +588,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "oY";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
             // 
             // radioButton3
             // 
@@ -602,7 +600,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "oZ";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.radioButton3.Click += new System.EventHandler(this.radioButton3_Click);
             // 
             // label14
             // 
@@ -693,7 +691,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(5, 655);
+            this.button15.Location = new System.Drawing.Point(1043, 637);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(208, 46);
             this.button15.TabIndex = 60;
