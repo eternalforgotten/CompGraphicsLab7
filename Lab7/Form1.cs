@@ -340,7 +340,73 @@ namespace Lab7
 
             rotationPoints.Add(new Point3D(x, y, z));
         }
+        delegate float func(float x, float y);
+        private void button16_Click(object sender, EventArgs e)
+        {
+            float x0 = 0, y0 = 0, x1 = 0, y1 = 0,count = 0;
+            try
+            {
+                float.TryParse(textBox9.Text, out x0);
+                float.TryParse(textBox10.Text, out y0);
+                float.TryParse(textBox11.Text, out x1);
+                float.TryParse(textBox12.Text, out y1);
+                float.TryParse(textBox13.Text, out count);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Неверное значение для графика");
+                return;
+            }
+            func f;
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    f = (x, y) => (float)(Cos(x + y));
+                    break;
+                case 1:
+                    f = (x, y) => (float)(Sin(x + y));
+                    break;
+                default:
+                    MessageBox.Show("График не выбран");
+                    return;
+            }
+            float dx = (x1 - x0) / count;
+            float dy = (y1 - y0) / count;
+            float curx, cury = y0;
 
-        
+            List<Point3D> points = new List<Point3D>();            
+            for (int i = 0; i <= count; i++)
+            {
+                curx = x0;
+                for (int j = 0; j <= count; j++)
+                {
+                    points.Add(new Point3D(curx, cury, f(curx, cury)));
+                    curx += dx;
+                }
+                cury += dy;
+            }
+            Figure figure = new Figure(points);
+            int n = (int)count + 1;
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < n; j++)
+                {
+                    if (j != n-1)
+                        figure.AddEdges(i*n + j, i*n + j+1);
+                    if (i != n-1)
+                        figure.AddEdges(i*n + j, (i+1)*n + j);
+                    if (i != n-1 && j != n-1)
+                        figure.AddSurface(new List<int> { i*n + j, i*n + j+1, (i+1)*n + j, (i+1)*n + j+1 });
+                }
+
+            AffineChanges.ScaleCenter(figure, 40);
+            AffineChanges.RotateCentral(figure, 60, 0, 0);
+            curFigure = figure;
+            Draw();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
